@@ -1,0 +1,97 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Breast screening participation across Australian SA3 regions",
+    "subtitle": "Women aged 50\u201374, 2023\u20132024. Grey = not published or no matched data."
+  },
+  "width": 850,
+  "height": 550,
+  "data": {
+    "url": "data/processed/australia_sa3_simplified.geojson",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.properties.SA3_CODE21",
+      "as": "sa3_code"
+    },
+    {
+      "lookup": "sa3_code",
+      "from": {
+        "data": {
+          "url": "data/processed/sa3_participation_2023_2024.csv",
+          "format": {
+            "type": "csv",
+            "parse": {
+              "SA3_CODE21": "string"
+            }
+          }
+        },
+        "key": "SA3_CODE21",
+        "fields": [
+          "participation_rate",
+          "participants",
+          "status"
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "type": "mercator"
+  },
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.25
+  },
+  "encoding": {
+    "color": {
+      "field": "participation_rate",
+      "type": "quantitative",
+      "title": "Participation (%)",
+      "scale": {
+        "scheme": "tealblues",
+        "domain": [
+          25,
+          75
+        ]
+      },
+      "legend": {
+        "format": ".0f"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "properties.SA3_NAME21",
+        "type": "nominal",
+        "title": "SA3 region"
+      },
+      {
+        "field": "participation_rate",
+        "type": "quantitative",
+        "title": "Participation (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "participants",
+        "type": "quantitative",
+        "title": "Participants",
+        "format": ",.0f"
+      },
+      {
+        "field": "status",
+        "type": "nominal",
+        "title": "Data status"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "background": "white"
+  }
+}

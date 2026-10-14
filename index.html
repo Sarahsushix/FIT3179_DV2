@@ -4,26 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beyond the Pink Ribbon | FIT3179 DV2</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <title>FIT3179 Data Visualisation 2</title>
+    <!-- Vega Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
-
-<script src="script.js"></script>
 
 <body>
 
-    <h1>FIT3179 Data Visualisation 2</h1>
+    <!-- Website Header -->
+    <header>
+        <h1>Beyond the Pink Ribbon</h1>
 
-    <h2>Welcome to my Data Visualisation Website</h2>
+        <h2>
+            Breast Cancer Screening in Australia
+        </h2>
 
-    <p>
-        This website is created for FIT3179 Data Visualisation 2.
-    </p>
+        <p>
+            Exploring screening participation, regional inequalities,
+            and women's health outcomes across Australia.
+        </p>
+    </header>
 
-    <p>
-        Interactive visualisations will be added soon.
-    </p>
+    <main>
+
+        <!-- Section 1: Introduction -->
+        <section id="introduction">
+
+            <h2>The National Picture</h2>
+
+            <p>
+                Breast cancer screening is an important part of
+                women's preventive healthcare in Australia.
+                This visualisation explores how screening participation
+                varies across different regions and population groups.
+            </p>
+
+        </section>
+
+        <!-- Section 2: Geographic Inequality -->
+        <section id="geographic-inequality">
+
+            <h2>Where Women Are Missing Out</h2>
+
+            <p>
+                Breast cancer screening participation varies
+                across Australian regions. The map below shows
+                screening participation rates among women aged
+                50–74 across Statistical Area Level 3 (SA3)
+                regions during 2023–2024.
+            </p>
+
+            <!-- SA3 Choropleth Map -->
+            <div id="sa3_map"></div>
+
+            <p class="source">
+                Source: Australian Institute of Health and Welfare (AIHW),
+                BreastScreen Australia Monitoring Report 2026.
+                Geographic boundaries: Australian Bureau of Statistics (ABS),
+                ASGS 2021.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 

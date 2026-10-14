@@ -1,1 +1,7 @@
-console.log("FIT3179 DV2 website loaded successfully!");
+vegaEmbed(
+    "#sa3_map",
+    "charts/sa3_choropleth.json",
+    {
+        actions: false
+    }
+).catch(console.error);
