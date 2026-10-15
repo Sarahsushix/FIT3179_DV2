@@ -84,3 +84,17 @@ vegaEmbed(
     "charts/state_screening_vs_mortality_scatter.json",
     embedOptions
 ).catch(console.error);
+
+// Chart 12: Rescreening Slope Chart
+vegaEmbed(
+    "#rescreening_slope",
+    "charts/rescreening_slope_chart.json",
+    embedOptions
+).catch(console.error);
+
+// Chart 13: Lowest SA3 Participation Lollipop Chart
+vegaEmbed(
+    "#sa3_lollipop",
+    "charts/sa3_lowest_participation_lollipop.json",
+    embedOptions
+).catch(console.error);

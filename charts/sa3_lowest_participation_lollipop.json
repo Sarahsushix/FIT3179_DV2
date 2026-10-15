@@ -1,0 +1,184 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "title": {
+    "text": "Where Is Breast Screening Participation Lowest?",
+    "subtitle": "10 SA3 areas with the lowest published participation rates · Women aged 50–74 · 2023–2024",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "offset": 16
+  },
+
+  "width": 690,
+  "height": 380,
+
+  "data": {
+    "url": "data/processed/sa3_participation_2023_2024.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "SA3_CODE21": "string",
+        "SA3_NAME21": "string",
+        "participation_rate": "number",
+        "participants": "number",
+        "population": "number",
+        "status": "string"
+      }
+    }
+  },
+
+  "transform": [
+    {
+      "filter": "datum.status === 'available' && isValid(datum.participation_rate) && isFinite(datum.participation_rate) && datum.population > 0"
+    },
+    {
+      "calculate": "substring(datum.SA3_CODE21, 0, 1)",
+      "as": "state_code"
+    },
+    {
+      "calculate": "datum.state_code === '1' ? 'NSW' : datum.state_code === '2' ? 'VIC' : datum.state_code === '3' ? 'QLD' : datum.state_code === '4' ? 'SA' : datum.state_code === '5' ? 'WA' : datum.state_code === '6' ? 'TAS' : datum.state_code === '7' ? 'NT' : datum.state_code === '8' ? 'ACT' : 'Other'",
+      "as": "state"
+    },
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "participation_rate",
+          "order": "ascending"
+        },
+        {
+          "field": "SA3_NAME21",
+          "order": "ascending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.rank <= 10"
+    }
+  ],
+
+  "encoding": {
+    "y": {
+      "field": "SA3_NAME21",
+      "type": "nominal",
+      "sort": {
+        "field": "participation_rate",
+        "order": "ascending"
+      },
+      "axis": {
+        "title": null,
+        "labelFontSize": 12,
+        "labelLimit": 240,
+        "ticks": false,
+        "domain": false
+      }
+    },
+
+    "x": {
+      "field": "participation_rate",
+      "type": "quantitative",
+      "scale": {
+        "domain": [0, 45]
+      },
+      "axis": {
+        "title": "Screening participation rate (%)",
+        "grid": true,
+        "gridColor": "#EEEEEE",
+        "tickCount": 6
+      }
+    },
+
+    "color": {
+      "condition": {
+        "test": "datum.state === 'NT'",
+        "value": "#D97757"
+      },
+      "value": "#247A78"
+    },
+
+    "tooltip": [
+      {
+        "field": "SA3_NAME21",
+        "title": "SA3 area"
+      },
+      {
+        "field": "state",
+        "title": "State / territory"
+      },
+      {
+        "field": "participation_rate",
+        "type": "quantitative",
+        "title": "Participation (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "participants",
+        "type": "quantitative",
+        "title": "Participants",
+        "format": ",.0f"
+      },
+      {
+        "field": "population",
+        "type": "quantitative",
+        "title": "Population",
+        "format": ",.0f"
+      }
+    ]
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x2": {
+          "datum": 0
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 145
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 11,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "participation_rate",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "color": {
+          "value": "#333333"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "background": "white",
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    }
+  }
+}

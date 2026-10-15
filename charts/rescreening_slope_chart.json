@@ -1,0 +1,135 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Did Rescreening Rates Return to Their 2017 Levels?",
+    "subtitle": "Rescreening within 27 months · Women aged 50–72 · Australia · 2017 vs 2022",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "offset": 18
+  },
+  "width": 650,
+  "height": 330,
+  "data": {
+    "url": "data/processed/rescreening_by_round_2014_2022.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "screening_round": "string",
+        "rescreening_rate": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year === 2017 || datum.year === 2022"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "sort": [2017, 2022],
+      "axis": {
+        "title": null,
+        "labelAngle": 0,
+        "labelFontSize": 13,
+        "labelFontWeight": "bold",
+        "ticks": false,
+        "domain": false
+      }
+    },
+    "y": {
+      "field": "rescreening_rate",
+      "type": "quantitative",
+      "scale": {
+        "domain": [45, 90],
+        "zero": false
+      },
+      "axis": {
+        "title": "Rescreening rate (%)",
+        "grid": true,
+        "gridColor": "#EEEEEE"
+      }
+    },
+    "color": {
+      "field": "screening_round",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "First",
+          "Second",
+          "Third and subsequent"
+        ],
+        "range": [
+          "#D97757",
+          "#75B6B4",
+          "#247A78"
+        ]
+      },
+      "legend": {
+        "title": "Screening round",
+        "orient": "top"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "detail": {
+          "field": "screening_round"
+        },
+        "tooltip": [
+          {
+            "field": "screening_round",
+            "title": "Screening round"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "rescreening_rate",
+            "type": "quantitative",
+            "title": "Rescreening rate (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 130
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -13,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "rescreening_rate",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "white",
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    }
+  }
+}
