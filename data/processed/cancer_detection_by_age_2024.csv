@@ -1,0 +1,11 @@
+age_group,detection_type,rate_per_10000,year
+50–54,All invasive cancers,50,2024
+50–54,Small invasive cancers (≤15 mm),25.7,2024
+55–59,All invasive cancers,51.1,2024
+55–59,Small invasive cancers (≤15 mm),28.2,2024
+60–64,All invasive cancers,64.1,2024
+60–64,Small invasive cancers (≤15 mm),36.8,2024
+65–69,All invasive cancers,71,2024
+65–69,Small invasive cancers (≤15 mm),42,2024
+70–74,All invasive cancers,85.5,2024
+70–74,Small invasive cancers (≤15 mm),52.4,2024

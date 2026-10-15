@@ -1,0 +1,183 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "How Has Breast Cancer Incidence Changed?",
+    "subtitle": "Women aged 50\u201374 \u00b7 Age-standardised new cases per 100,000 women \u00b7 Australia",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "anchor": "start"
+  },
+  "width": 760,
+  "height": 350,
+  "data": {
+    "url": "data/processed/breast_cancer_incidence_1982_2025.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.year)",
+      "as": "year_num"
+    },
+    {
+      "calculate": "toNumber(datum.incidence_rate)",
+      "as": "rate_num"
+    }
+  ],
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.year_num <= 2021"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#247A78",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "year_num",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1982,
+              2025
+            ]
+          },
+          "axis": {
+            "title": "Year of diagnosis",
+            "format": "d",
+            "tickMinStep": 1
+          }
+        },
+        "y": {
+          "field": "rate_num",
+          "type": "quantitative",
+          "scale": {
+            "zero": false
+          },
+          "axis": {
+            "title": "Age-standardised incidence per 100,000 women"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year_num",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "rate_num",
+            "type": "quantitative",
+            "title": "Incidence rate",
+            "format": ".1f"
+          },
+          {
+            "field": "status",
+            "type": "nominal",
+            "title": "Status"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year_num >= 2021"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#D97757",
+        "strokeWidth": 3,
+        "strokeDash": [
+          7,
+          5
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "year_num",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "rate_num",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "year_num",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "rate_num",
+            "type": "quantitative",
+            "title": "Incidence rate",
+            "format": ".1f"
+          },
+          {
+            "field": "status",
+            "type": "nominal",
+            "title": "Status"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year_num == 2021"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 100,
+        "color": "#247A78"
+      },
+      "encoding": {
+        "x": {
+          "field": "year_num",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "rate_num",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year_num == 2025"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 100,
+        "color": "#D97757"
+      },
+      "encoding": {
+        "x": {
+          "field": "year_num",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "rate_num",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "background": "white"
+  }
+}

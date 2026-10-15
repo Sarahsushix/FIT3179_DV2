@@ -1,0 +1,118 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Is Screening Participation Associated with Breast Cancer Mortality?",
+    "subtitle": "Eight states and territories \u00b7 Screening: 2023\u20132024 \u00b7 Mortality: 2019\u20132023",
+    "fontSize": 17,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "width": 730,
+  "height": 420,
+  "data": {
+    "url": "data/processed/state_screening_vs_mortality.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 155,
+        "color": "#247A78",
+        "opacity": 0.85
+      },
+      "encoding": {
+        "x": {
+          "field": "participation_rate",
+          "type": "quantitative",
+          "scale": {
+            "zero": false,
+            "domain": [
+              32,
+              62
+            ]
+          },
+          "axis": {
+            "title": "Screening participation, 2023\u20132024 (%)"
+          }
+        },
+        "y": {
+          "field": "mortality_rate",
+          "type": "quantitative",
+          "scale": {
+            "zero": false,
+            "domain": [
+              34,
+              41
+            ]
+          },
+          "axis": {
+            "title": "Age-standardised mortality per 100,000 women"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State / territory"
+          },
+          {
+            "field": "participation_rate",
+            "type": "quantitative",
+            "title": "Screening participation (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "mortality_rate",
+            "type": "quantitative",
+            "title": "Mortality per 100,000",
+            "format": ".1f"
+          },
+          {
+            "field": "participants",
+            "type": "quantitative",
+            "title": "Women screened",
+            "format": ",.0f"
+          },
+          {
+            "field": "deaths",
+            "type": "quantitative",
+            "title": "Deaths, 2019\u20132023",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 9,
+        "dy": -8,
+        "fontSize": 11,
+        "color": "#35465A"
+      },
+      "encoding": {
+        "x": {
+          "field": "participation_rate",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "mortality_rate",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "state_code",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "white",
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    }
+  }
+}

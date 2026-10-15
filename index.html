@@ -12,7 +12,7 @@
 
     <!-- Vega Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
@@ -20,16 +20,16 @@
 
     <!-- Website Header -->
     <header>
+
         <h1>Beyond the Pink Ribbon</h1>
 
-        <h2>
-            Breast Cancer Screening in Australia
-        </h2>
+        <h2>Breast Cancer Screening in Australia</h2>
 
         <p>
             Exploring screening participation, regional inequalities,
             and women's health outcomes across Australia.
         </p>
+
     </header>
 
     <main>
@@ -40,28 +40,69 @@
             <h2>The National Picture</h2>
 
             <p>
-                Breast cancer screening is an important part of
-                women's preventive healthcare in Australia.
-                This visualisation explores how screening participation
-                varies across different regions and population groups.
+                Breast cancer screening is an important part of women's
+                preventive healthcare in Australia. Yet participation is
+                not equal across the country. Explore how screening rates
+                vary between states and local regions, and what these
+                differences mean for access to preventive healthcare.
+            </p>
+
+            <div class="national-highlight"
+                 aria-label="National screening participation rate">
+
+                <p>
+                    <strong>52.4%</strong>
+                    — National Screening Participation Rate
+                </p>
+
+                <p>
+                    Women aged 50–74, Australia, 2023–2024
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Section 2: National Participation Trend -->
+        <section id="national-participation-trend">
+
+            <h2>How Has Breast Screening Participation Changed Over Time?</h2>
+
+            <p>
+                National screening participation has changed over time.
+                This chart tracks participation among Australian women
+                aged 50–74 across two-year reporting periods from
+                2014–2015 to 2024–2025, providing context for the
+                geographic differences explored below.
+            </p>
+
+            <!-- Chart 1: National Participation Trend -->
+            <div id="national_trend"></div>
+
+            <p class="source">
+                <strong>Source:</strong>
+                Australian Institute of Health and Welfare (AIHW),
+                BreastScreen Australia Monitoring Report 2026.
+                Women aged 50–74. Note: 2024–2025 data are preliminary.
             </p>
 
         </section>
 
-        <!-- Section 2: Geographic Inequality -->
+
+        <!-- Section 3: Geographic Inequality -->
         <section id="geographic-inequality">
 
             <h2>Where Women Are Missing Out</h2>
 
             <p>
-                Breast cancer screening participation varies
-                across Australian regions. The map below shows
-                screening participation rates among women aged
-                50–74 across Statistical Area Level 3 (SA3)
-                regions during 2023–2024.
+                Breast cancer screening participation varies across
+                Australian regions. The map below shows screening
+                participation rates among women aged 50–74 across
+                Statistical Area Level 3 (SA3) regions during 2023–2024.
             </p>
 
-            <!-- SA3 Choropleth Map -->
+            <!-- Chart 2: SA3 Choropleth Map -->
             <div id="sa3_map"></div>
 
             <p class="source">
@@ -73,7 +114,381 @@
 
         </section>
 
+
+        <!-- Section 4: Breast Screening Non-Participation Dot Density Map -->
+        <section id="screening-dot-density">
+
+            <h2>
+                Mapping Non-Participation in Breast Screening Across Australia
+            </h2>
+
+            <p>
+                Screening participation rates reveal where uptake is lower,
+                but they do not show how many women are missing from screening
+                programmes. This dot density map illustrates the estimated
+                number of women aged 50–74 who were not counted as participants
+                in BreastScreen Australia during 2023–2024.
+            </p>
+
+            <p>
+                Each dot represents approximately 1,000 women. Dots are
+                randomly placed within their corresponding SA3 areas and
+                do not show individual residential locations. Dot colours
+                distinguish areas with higher and lower socioeconomic
+                disadvantage, based on the ABS 2021 SEIFA Index of Relative
+                Socio-economic Disadvantage (IRSD).
+            </p>
+
+            <!-- Chart 3: Dot Density Map -->
+            <div id="state_participation"></div>
+
+            <p class="key-finding">
+                <strong>How to read this map:</strong>
+                Denser clusters of dots indicate larger numbers of women
+                not recorded as screening participants, not necessarily lower
+                screening participation rates. Dot locations are simulated,
+                and colours describe area-level socioeconomic disadvantage,
+                not the circumstances of individual women.
+            </p>
+
+            <p class="source">
+                <strong>Source:</strong>
+                AIHW, BreastScreen Australia Monitoring Report 2026,
+                Supplementary Table S1.12 (2023–2024);
+                ABS, SEIFA 2021 (IRSD) and ASGS 2021 SA3 boundaries.
+            </p>
+
+        </section>
+
+
+        <!-- Section 5: Age Group Participation -->
+        <section id="age-group-participation">
+
+            <h2>
+                Does Age Make a Difference in Screening Participation?
+            </h2>
+
+            <p>
+                Breast screening participation varies across age groups.
+                The heatmap below compares participation rates among
+                Australian women aged 50–74 across two-year reporting
+                periods from 2014–2015 to 2024–2025.
+                Darker colours indicate higher participation rates.
+            </p>
+
+            <!-- Chart 4: Age Group Participation Heatmap -->
+            <div id="age_heatmap"></div>
+
+            <p class="source">
+                Source: Australian Institute of Health and Welfare (AIHW),
+                BreastScreen Australia Monitoring Report 2026,
+                Supplementary Table S1.1.
+                Note: 2024–2025 data are preliminary.
+            </p>
+
+        </section>
+
+
+        <!-- Section 6: Remoteness Comparison -->
+        <section id="remoteness-comparison">
+
+            <h2>
+                Does Where You Live Affect Your Likelihood of Being Screened?
+            </h2>
+
+            <p>
+                Screening participation varies across different levels
+                of geographic remoteness in Australia. Comparing major
+                cities, regional areas, and remote communities reveals
+                important differences in screening uptake.
+            </p>
+
+            <p>
+                In 2023–2024, women living in inner regional areas
+                recorded the highest participation rate at 55.3%,
+                while women in very remote areas recorded the lowest
+                rate at 37.6%. This represents a difference of
+                17.7 percentage points.
+            </p>
+
+            <!-- Chart 5: Remoteness Participation Grouped Bar Chart -->
+            <div id="remoteness_bar"></div>
+
+            <p class="source">
+                Source: Australian Institute of Health and Welfare (AIHW),
+                BreastScreen Australia Monitoring Report 2026,
+                Appendix Table A1.4.
+                Women aged 50–74, 2023–2024.
+            </p>
+
+        </section>
+
+
+        <!-- Section 7: Rescreening Rate -->
+        <section id="rescreening">
+
+            <h2>
+                Are Women Returning for Regular Breast Cancer Screening?
+            </h2>
+
+            <p>
+                Screening participation is only part of the story.
+                Regular rescreening is also important for maintaining
+                engagement with breast cancer screening programs.
+                The chart below compares rescreening rates among women
+                at different stages of their screening history.
+            </p>
+
+            <p>
+                Women who had already completed three or more screening
+                rounds consistently recorded higher rescreening rates
+                than women returning after their first screening.
+                Rescreening rates declined during the periods affected
+                by COVID-19, followed by a partial recovery.
+            </p>
+
+            <!-- Chart 6: Rescreening Rate Multi-series Line Chart -->
+            <div id="rescreening_line"></div>
+
+            <p class="source">
+                Source: Australian Institute of Health and Welfare (AIHW),
+                BreastScreen Australia Monitoring Report 2026,
+                Appendix Table A2.1.
+                Age-standardised rescreening rates among women aged 50–72,
+                screening years 2014–2022.
+                Rescreening is measured within 27 months.
+                Note: Results for 2018–2022 were affected by COVID-19.
+            </p>
+
+        </section>
+
+
+        <!-- Section 8: SA3 Participation Distribution -->
+        <section id="participation-gap">
+
+            <h2>
+                How Unequal Is Screening Participation Within Australian States?
+            </h2>
+
+            <p>
+                State-level screening participation rates provide a useful
+                overview, but they can conceal substantial differences
+                between local communities.
+            </p>
+
+            <p>
+                This box plot examines the distribution of breast screening
+                participation rates across Statistical Area Level 3 (SA3)
+                regions within each Australian state and territory.
+            </p>
+
+            <p>
+                Each box represents the middle 50% of SA3 participation
+                rates within a state or territory. The line inside the
+                box shows the median, while individual points indicate
+                potential outliers. The dashed reference line marks
+                Australia's national participation rate of 52.4%.
+            </p>
+
+            <!-- Chart 7: SA3 Participation Box Plot -->
+            <div id="sa3_gap_map"></div>
+
+            <p>
+                <strong>Key finding:</strong>
+                Screening participation varies not only between states
+                and territories, but also between local communities
+                within them. The Northern Territory shows a particularly
+                low distribution of SA3 participation rates, while
+                several other states contain regions with participation
+                substantially below the national average.
+            </p>
+
+            <p class="source">
+                Source: Australian Institute of Health and Welfare (AIHW),
+                BreastScreen Australia Monitoring Report 2026.
+                Women aged 50–74, 2023–2024.
+                Each SA3 region contributes equally to the distribution.
+                State-level box plot statistics are not population-weighted.
+            </p>
+
+        </section>
+
+
+        <!-- Section 9: Breast Cancer Detection by Age -->
+        <section id="cancer-detection">
+
+            <h2>
+                What Does Breast Screening Detect?
+            </h2>
+
+            <p>
+                Breast screening is not only about participation. It also
+                helps detect breast cancer. In 2024, the rate of invasive
+                breast cancers detected through BreastScreen Australia
+                generally increased with age.
+            </p>
+
+            <p>
+                The chart below compares the detection rates of all
+                invasive breast cancers and small invasive breast cancers
+                (15 mm or less) among women aged 50–74.
+                Small invasive cancers are included within the total
+                number of invasive cancers detected.
+            </p>
+
+            <!-- Chart 8: Cancer Detection by Age Dot Plot -->
+            <div id="cancer_detection_dotplot"></div>
+
+            <p class="source">
+                Source: Australian Institute of Health and Welfare (AIHW),
+                BreastScreen Australia Monitoring Report 2026,
+                Appendix Table A4.3.
+                Women aged 50–74, 2024.
+                Detection rates are per 10,000 women screened.
+                Small invasive cancers are a subset of all invasive cancers.
+            </p>
+
+        </section>
+
+
+        <!-- Section 10: Breast Cancer Incidence Trend -->
+        <section id="breast-cancer-incidence">
+
+            <h2>
+                How Has Breast Cancer Incidence Changed Over Time?
+            </h2>
+
+            <p>
+                Breast cancer incidence provides a broader perspective
+                on the burden of disease beyond screening participation
+                and detection. Among Australian women aged 50–74,
+                the age-standardised incidence rate increased substantially
+                between 1982 and 2021, although the trend varied over time.
+            </p>
+
+            <p>
+                The chart distinguishes observed incidence rates from
+                estimates for 2022–2025. These estimates provide an
+                indication of recent trends but should not be interpreted
+                as confirmed cancer diagnoses.
+            </p>
+
+            <!-- Chart 9: Breast Cancer Incidence Trend -->
+            <div id="incidence_trend"></div>
+
+            <p class="source">
+                Source: Australian Institute of Health and Welfare (AIHW),
+                BreastScreen Australia Monitoring Report 2026,
+                Appendix Table A7.6.
+                Women aged 50–74, Australia, 1982–2025.
+                Rates are age-standardised per 100,000 women.
+                Data for 2022–2025 are estimates.
+            </p>
+
+        </section>
+
+
+        <!-- Section 11: Breast Cancer Mortality Map -->
+        <section id="breast-cancer-mortality">
+
+            <h2>
+                Where Is Breast Cancer Mortality Highest Across Australia?
+            </h2>
+
+            <p>
+                Breast cancer mortality provides another perspective on
+                the burden of disease across Australia. Between 2019
+                and 2023, age-standardised mortality rates among women
+                aged 50–74 varied across states and territories.
+            </p>
+
+            <p>
+                Victoria recorded the highest mortality rate at
+                39.8 deaths per 100,000 women, while the Northern
+                Territory recorded the lowest rate at 35.5.
+                The proportional symbol map compares mortality
+                rates across Australia's states and territories.
+            </p>
+
+            <p>
+                Geographic differences in mortality may reflect a range
+                of factors and should not be interpreted as evidence
+                that screening participation directly determines
+                breast cancer mortality.
+            </p>
+
+            <!-- Chart 10: Breast Cancer Mortality Symbol Map -->
+            <div id="mortality_map"></div>
+
+            <p class="source">
+                Source: Australian Institute of Health and Welfare (AIHW),
+                BreastScreen Australia Monitoring Report 2026,
+                Appendix Table A8.2.
+                Women aged 50–74, 2019–2023.
+                Age-standardised mortality rates per 100,000 women.
+                Geographic boundaries: Australian Bureau of Statistics (ABS),
+                ASGS 2021.
+            </p>
+
+        </section>
+
+
+        <!-- Section 12: Screening Participation vs Mortality -->
+        <section id="screening-vs-mortality">
+
+            <h2>
+                Is Higher Screening Participation Associated with Lower Breast Cancer Mortality?
+            </h2>
+
+            <p>
+                Screening participation and breast cancer mortality provide
+                different perspectives on women's health across Australia.
+                This scatter plot compares screening participation rates
+                with age-standardised breast cancer mortality rates across
+                Australia's eight states and territories.
+            </p>
+
+            <p>
+                The relationship is not straightforward. States and territories
+                with higher screening participation do not consistently
+                have lower mortality rates. The two measures also cover
+                different reporting periods and may be influenced by
+                population characteristics, cancer risk, diagnosis,
+                treatment, and other factors.
+            </p>
+
+            <!-- Chart 11: Screening vs Mortality Scatter Plot -->
+            <div id="screening_mortality_scatter"></div>
+
+            <p class="source">
+                Source: Australian Institute of Health and Welfare (AIHW),
+                BreastScreen Australia Monitoring Report 2026.
+                Screening participation: women aged 50–74, 2023–2024.
+                Breast cancer mortality: women aged 50–74, 2019–2023.
+                Mortality rates are age-standardised per 100,000 women.
+                This comparison is descriptive and does not establish causation.
+            </p>
+
+        </section>
+
     </main>
+
+
+    <!-- Website Footer -->
+    <footer>
+
+        <p>
+            Beyond the Pink Ribbon |
+            FIT3179 Data Visualisation 2
+        </p>
+
+        <p>
+            Data Sources: Australian Institute of Health and Welfare (AIHW)
+            and Australian Bureau of Statistics (ABS).
+        </p>
+
+    </footer>
+
 
     <!-- JavaScript -->
     <script src="script.js"></script>

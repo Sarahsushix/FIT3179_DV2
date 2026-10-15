@@ -1,0 +1,28 @@
+year,screening_round,rescreening_rate,covid_affected
+2014,First,60,False
+2014,Second,70.1,False
+2014,Third and subsequent,85,False
+2015,First,60.9,False
+2015,Second,69.8,False
+2015,Third and subsequent,84.6,False
+2016,First,60.6,False
+2016,Second,68.2,False
+2016,Third and subsequent,84.5,False
+2017,First,59.5,False
+2017,Second,68.5,False
+2017,Third and subsequent,84.1,False
+2018,First,44.2,True
+2018,Second,51.3,True
+2018,Third and subsequent,68.1,True
+2019,First,41.1,True
+2019,Second,46.6,True
+2019,Third and subsequent,65.1,True
+2020,First,50.1,True
+2020,Second,58.2,True
+2020,Third and subsequent,75.9,True
+2021,First,52.4,True
+2021,Second,60.4,True
+2021,Third and subsequent,77.4,True
+2022,First,54.4,True
+2022,Second,60.8,True
+2022,Third and subsequent,78.7,True

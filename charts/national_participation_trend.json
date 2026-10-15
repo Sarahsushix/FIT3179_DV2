@@ -1,0 +1,206 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "title": {
+    "text": "How Has Breast Screening Participation Changed Over Time?",
+    "subtitle": "Women aged 50–74 · Australia · Two-year reporting periods",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "offset": 20
+  },
+
+  "width": 700,
+  "height": 350,
+
+  "data": {
+    "url": "data/processed/national_participation_trend.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "period": "string",
+        "participation_rate": "number",
+        "age_standardised_rate": "number",
+        "participants": "number",
+        "preliminary": "boolean"
+      }
+    }
+  },
+
+  "encoding": {
+    "x": {
+      "field": "period",
+      "type": "ordinal",
+      "sort": [
+        "2014-2015",
+        "2015-2016",
+        "2016-2017",
+        "2017-2018",
+        "2018-2019",
+        "2019-2020",
+        "2020-2021",
+        "2021-2022",
+        "2022-2023",
+        "2023-2024",
+        "2024-2025"
+      ],
+      "title": "Two-year reporting period",
+      "axis": {
+        "labelAngle": -35,
+        "labelFontSize": 11,
+        "titleFontSize": 12
+      }
+    },
+
+    "y": {
+      "field": "participation_rate",
+      "type": "quantitative",
+      "title": "Participation rate (%)",
+      "scale": {
+        "domain": [40, 60],
+        "zero": false
+      },
+      "axis": {
+        "labelFontSize": 11,
+        "titleFontSize": 12,
+        "grid": true,
+        "gridColor": "#eeeeee"
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "color": "#247A78"
+      },
+
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "period",
+            "type": "ordinal",
+            "title": "Screening Period"
+          },
+          {
+            "field": "participation_rate",
+            "type": "quantitative",
+            "title": "Participation Rate (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "age_standardised_rate",
+            "type": "quantitative",
+            "title": "Age-standardised Rate (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "participants",
+            "type": "quantitative",
+            "title": "Participants",
+            "format": ",.0f"
+          },
+          {
+            "field": "preliminary",
+            "type": "nominal",
+            "title": "Preliminary Data"
+          }
+        ]
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.period !== '2024-2025'"
+        }
+      ],
+
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 65,
+        "color": "#247A78"
+      },
+
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "period",
+            "type": "ordinal",
+            "title": "Screening Period"
+          },
+          {
+            "field": "participation_rate",
+            "type": "quantitative",
+            "title": "Participation Rate (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "age_standardised_rate",
+            "type": "quantitative",
+            "title": "Age-standardised Rate (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "participants",
+            "type": "quantitative",
+            "title": "Participants",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.period === '2024-2025'"
+        }
+      ],
+
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 150,
+        "color": "#D97757"
+      },
+
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "period",
+            "type": "ordinal",
+            "title": "Screening Period"
+          },
+          {
+            "field": "participation_rate",
+            "type": "quantitative",
+            "title": "Participation Rate (%)",
+            "format": ".1f"
+          },
+          {
+            "value": "Preliminary data"
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "background": "white",
+
+    "view": {
+      "stroke": null
+    },
+
+    "font": "Arial",
+
+    "axis": {
+      "labelColor": "#444444",
+      "titleColor": "#333333"
+    }
+  }
+}

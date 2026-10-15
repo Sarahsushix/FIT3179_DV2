@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Do Women Return for Their Next Screening?",
+    "subtitle": "Rescreening within 27 months \u00b7 Women aged 50\u201372 \u00b7 Australia \u00b7 Age-standardised rates",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12
+  },
+  "width": 700,
+  "height": 350,
+  "data": {
+    "url": "data/processed/rescreening_by_round_2014_2022.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "screening_round": "string",
+        "rescreening_rate": "number",
+        "covid_affected": "boolean"
+      }
+    }
+  },
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": true,
+      "size": 55
+    },
+    "strokeWidth": 2.5
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year of screening",
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "rescreening_rate",
+      "type": "quantitative",
+      "title": "Rescreening within 27 months (%)",
+      "scale": {
+        "domain": [
+          35,
+          90
+        ],
+        "zero": false
+      }
+    },
+    "color": {
+      "field": "screening_round",
+      "type": "nominal",
+      "title": "Screening round",
+      "scale": {
+        "domain": [
+          "First",
+          "Second",
+          "Third and subsequent"
+        ],
+        "range": [
+          "#D97757",
+          "#75B6B4",
+          "#247A78"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "year",
+        "type": "ordinal",
+        "title": "Screening year"
+      },
+      {
+        "field": "screening_round",
+        "type": "nominal",
+        "title": "Screening round"
+      },
+      {
+        "field": "rescreening_rate",
+        "type": "quantitative",
+        "title": "Rescreening rate (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "covid_affected",
+        "type": "nominal",
+        "title": "COVID-affected period"
+      }
+    ]
+  },
+  "config": {
+    "background": "white",
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial"
+  }
+}

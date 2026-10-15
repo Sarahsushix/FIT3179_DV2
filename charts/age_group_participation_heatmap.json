@@ -1,0 +1,113 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Screening Participation by Age Group and Period",
+    "subtitle": "Women aged 50–74 · Australia · 2014–2015 to 2024–2025 (preliminary)",
+    "anchor": "start",
+    "fontSize": 17,
+    "subtitleFontSize": 12
+  },
+  "width": 700,
+  "height": 260,
+  "data": {
+    "url": "data/processed/age_group_participation_heatmap.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "period": "string",
+        "age_group": "string",
+        "participation_rate": "number",
+        "participants": "number",
+        "preliminary": "boolean"
+      }
+    }
+  },
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "period",
+      "type": "ordinal",
+      "sort": [
+        "2014-2015",
+        "2015-2016",
+        "2016-2017",
+        "2017-2018",
+        "2018-2019",
+        "2019-2020",
+        "2020-2021",
+        "2021-2022",
+        "2022-2023",
+        "2023-2024",
+        "2024-2025"
+      ],
+      "title": "Two-year reporting period",
+      "axis": {
+        "labelAngle": -35
+      }
+    },
+    "y": {
+      "field": "age_group",
+      "type": "ordinal",
+      "sort": [
+        "50-54",
+        "55-59",
+        "60-64",
+        "65-69",
+        "70-74"
+      ],
+      "title": "Age group (years)"
+    },
+    "color": {
+      "field": "participation_rate",
+      "type": "quantitative",
+      "title": "Participation (%)",
+      "scale": {
+        "scheme": "tealblues",
+        "domain": [
+          40,
+          62
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "period",
+        "type": "nominal",
+        "title": "Period"
+      },
+      {
+        "field": "age_group",
+        "type": "nominal",
+        "title": "Age group"
+      },
+      {
+        "field": "participation_rate",
+        "type": "quantitative",
+        "title": "Participation (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "participants",
+        "type": "quantitative",
+        "title": "Participants",
+        "format": ",.0f"
+      },
+      {
+        "field": "preliminary",
+        "type": "nominal",
+        "title": "Preliminary"
+      }
+    ]
+  },
+  "config": {
+    "background": "white",
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial"
+  }
+}

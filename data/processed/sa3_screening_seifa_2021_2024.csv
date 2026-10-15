@@ -1,0 +1,341 @@
+SA3_CODE21,SA3_NAME21,age_group,period,participation_rate,screening_status,irsd_weighted_score_estimate,sa2_irsd_covered_population_2021,sa2_irsd_count,seifa_status
+10102,Queanbeyan,50–74,2023–2024,66.0916848829,available,1061.113,64794,7,available_estimate
+10103,Snowy Mountains,50–74,2023–2024,60.9788732622,available,1017.362,20722,4,available_estimate
+10104,South Coast,50–74,2023–2024,61.2322260571,available,985.311,76734,11,available_estimate
+10105,Goulburn - Mulwaree,50–74,2023–2024,57.7096381488,available,978.769,38404,2,available_estimate
+10106,Young - Yass,50–74,2023–2024,60.4084003535,available,1008.547,38157,4,available_estimate
+10201,Gosford,50–74,2023–2024,47.3234494492,available,1019.859,178416,16,available_estimate
+10202,Wyong,50–74,2023–2024,46.2799255586,available,966.628,168159,14,available_estimate
+10301,Bathurst,50–74,2023–2024,57.0704311789,available,989.136,49138,5,available_estimate
+10302,Lachlan Valley,50–74,2023–2024,60.3027425221,available,953.44,54684,8,available_estimate
+10303,Lithgow - Mudgee,50–74,2023–2024,50.1630663442,available,958.49,47866,5,available_estimate
+10304,Orange,50–74,2023–2024,59.6499698276,available,1004.41,61265,4,available_estimate
+10401,Clarence Valley,50–74,2023–2024,54.8858235915,available,940.596,53663,3,available_estimate
+10402,Coffs Harbour,50–74,2023–2024,58.0914013426,available,972.931,92470,9,available_estimate
+10501,Bourke - Cobar - Coonamble,50–74,2023–2024,52.4422259016,available,919.701,21608,5,available_estimate
+10502,Broken Hill and Far West,50–74,2023–2024,58.5099015984,available,909.29,19876,2,available_estimate
+10503,Dubbo,50–74,2023–2024,57.5483210326,available,973.325,74087,8,available_estimate
+10601,Lower Hunter,50–74,2023–2024,57.6887914993,available,960.24,97932,7,available_estimate
+10602,Maitland,50–74,2023–2024,60.4646076281,available,994.12,87015,7,available_estimate
+10603,Port Stephens,50–74,2023–2024,62.4101688235,available,981.412,76413,7,available_estimate
+10604,Upper Hunter,50–74,2023–2024,62.7189236775,available,954.548,30584,4,available_estimate
+10701,Dapto - Port Kembla,50–74,2023–2024,48.9793653559,available,958.85,79809,6,available_estimate
+10702,Illawarra Catchment Reserve,50–74,2023–2024,,not_published,,,0,missing
+10703,Kiama - Shellharbour,50–74,2023–2024,55.1923863082,available,1003.047,99259,8,available_estimate
+10704,Wollongong,50–74,2023–2024,54.2762005269,available,1024.017,134757,8,available_estimate
+10801,Great Lakes,50–74,2023–2024,59.2193182385,available,947.926,33308,4,available_estimate
+10802,Kempsey - Nambucca,50–74,2023–2024,56.2944034287,available,909.284,51156,6,available_estimate
+10803,Lord Howe Island,50–74,2023–2024,,not_published,1052.636,445,1,available_estimate
+10804,Port Macquarie,50–74,2023–2024,60.425081281,available,985.041,86776,6,available_estimate
+10805,Taree - Gloucester,50–74,2023–2024,57.156524512,available,933.959,57348,5,available_estimate
+10901,Albury,50–74,2023–2024,58.3197719789,available,972.89,67049,5,available_estimate
+10902,Lower Murray,50–74,2023–2024,53.6003308048,available,966.02,13056,3,available_estimate
+10903,Upper Murray exc. Albury,50–74,2023–2024,56.7428705336,available,978.342,43440,6,available_estimate
+11001,Armidale,50–74,2023–2024,63.6172951005,available,984.604,37532,4,available_estimate
+11002,Inverell - Tenterfield,50–74,2023–2024,55.0119133797,available,923.255,38732,5,available_estimate
+11003,Moree - Narrabri,50–74,2023–2024,54.3960159627,available,956.363,24715,4,available_estimate
+11004,Tamworth - Gunnedah,50–74,2023–2024,63.6831864942,available,957.942,84578,7,available_estimate
+11101,Lake Macquarie - East,50–74,2023–2024,63.9472359339,available,1009.968,126496,9,available_estimate
+11102,Lake Macquarie - West,50–74,2023–2024,57.162290152,available,992.278,85012,7,available_estimate
+11103,Newcastle,50–74,2023–2024,61.691397018,available,1009.022,178971,13,available_estimate
+11201,Richmond Valley - Coastal,50–74,2023–2024,56.0498763661,available,1013.48,87773,8,available_estimate
+11202,Richmond Valley - Hinterland,50–74,2023–2024,55.7196141096,available,947.177,71896,6,available_estimate
+11203,Tweed Valley,50–74,2023–2024,54.3824273717,available,988.647,97387,8,available_estimate
+11301,Griffith - Murrumbidgee (West),50–74,2023–2024,58.1354983727,available,962.915,49564,4,available_estimate
+11302,Tumut - Tumbarumba,50–74,2023–2024,57.0295351463,available,952.56,14933,3,available_estimate
+11303,Wagga Wagga,50–74,2023–2024,62.4629813273,available,980.4,99172,9,available_estimate
+11401,Shoalhaven,50–74,2023–2024,56.2253304924,available,978.873,108333,12,available_estimate
+11402,Southern Highlands,50–74,2023–2024,55.523907583,available,1045.496,52677,6,available_estimate
+11501,Baulkham Hills,50–74,2023–2024,50.0519692596,available,1096.96,154757,12,available_estimate
+11502,Dural - Wisemans Ferry,50–74,2023–2024,50.0628173203,available,1087.369,27915,2,available_estimate
+11503,Hawkesbury,50–74,2023–2024,,not_published,1058.828,25007,2,available_estimate
+11504,Rouse Hill - McGraths Hill,50–74,2023–2024,,not_published,1095.593,56683,4,available_estimate
+11601,Blacktown,50–74,2023–2024,39.8123327661,available,973.424,142604,8,available_estimate
+11602,Blacktown - North,50–74,2023–2024,41.16741142,available,1076.446,142768,9,available_estimate
+11603,Mount Druitt,50–74,2023–2024,37.5397491186,available,896.95,115619,6,available_estimate
+11701,Botany,50–74,2023–2024,,not_published,1012.547,58744,5,available_estimate
+11702,Marrickville - Sydenham - Petersham,50–74,2023–2024,56.7293800482,available,1044.536,54776,4,available_estimate
+11703,Sydney Inner City,50–74,2023–2024,53.0027175528,available,1031.974,217788,16,available_estimate
+11801,Eastern Suburbs - North,50–74,2023–2024,47.7969776191,available,1099.522,127160,9,available_estimate
+11802,Eastern Suburbs - South,50–74,2023–2024,57.0985589539,available,1059.124,134229,11,available_estimate
+11901,Bankstown,50–74,2023–2024,43.591885957,available,922.4,186247,12,available_estimate
+11902,Canterbury,50–74,2023–2024,43.9794770469,available,912.247,141094,10,available_estimate
+11903,Hurstville,50–74,2023–2024,53.4992794024,available,997.829,131868,9,available_estimate
+11904,Kogarah - Rockdale,50–74,2023–2024,50.1299238129,available,1001.8,145918,10,available_estimate
+12001,Canada Bay,50–74,2023–2024,50.0854302881,available,1069.6,86707,5,available_estimate
+12002,Leichhardt,50–74,2023–2024,58.9461977907,available,1085.69,56399,4,available_estimate
+12003,Strathfield - Burwood - Ashfield,50–74,2023–2024,49.6799693227,available,1015.417,161669,12,available_estimate
+12101,Chatswood - Lane Cove,50–74,2023–2024,49.6061231359,available,1085.121,117456,8,available_estimate
+12102,Hornsby,50–74,2023–2024,51.9757533093,available,1070.288,87454,6,available_estimate
+12103,Ku-ring-gai,50–74,2023–2024,48.8406703721,available,1108.22,124360,6,available_estimate
+12104,North Sydney - Mosman,50–74,2023–2024,47.8089877048,available,1100.051,94773,6,available_estimate
+12201,Manly,50–74,2023–2024,54.6280629546,available,1109.106,43170,2,available_estimate
+12202,Pittwater,50–74,2023–2024,51.2065917521,available,1094.441,63484,5,available_estimate
+12203,Warringah,50–74,2023–2024,51.7818488629,available,1080.672,156898,12,available_estimate
+12301,Camden,50–74,2023–2024,49.5077329263,available,1046.162,73579,6,available_estimate
+12302,Campbelltown (NSW),50–74,2023–2024,46.3992558078,available,948.771,177872,10,available_estimate
+12303,Wollondilly,50–74,2023–2024,,not_published,1037.493,45841,4,available_estimate
+12401,Blue Mountains,50–74,2023–2024,50.308569771,available,1048.162,77942,6,available_estimate
+12402,Blue Mountains - South,50–74,2023–2024,,not_published,,,0,missing
+12403,Penrith,50–74,2023–2024,48.4990984553,available,1006.648,159319,10,available_estimate
+12404,Richmond - Windsor,50–74,2023–2024,,not_published,990.138,38007,3,available_estimate
+12405,St Marys,50–74,2023–2024,42.7446107913,available,952.511,56781,4,available_estimate
+12501,Auburn,50–74,2023–2024,40.8173987658,available,915.78,103542,8,available_estimate
+12502,Carlingford,50–74,2023–2024,43.5247585801,available,1024.784,74022,4,available_estimate
+12503,Merrylands - Guildford,50–74,2023–2024,43.8734466109,available,882.743,163798,9,available_estimate
+12504,Parramatta,50–74,2023–2024,,not_published,1017.216,152126,10,available_estimate
+12601,Pennant Hills - Epping,50–74,2023–2024,49.0246566931,available,1082.562,54831,3,available_estimate
+12602,Ryde - Hunters Hill,50–74,2023–2024,48.1322115114,available,1058.958,147211,10,available_estimate
+12701,Bringelly - Green Valley,50–74,2023–2024,44.4578432778,available,960.469,143083,12,available_estimate
+12702,Fairfield,50–74,2023–2024,48.6675433844,available,818.546,195137,12,available_estimate
+12703,Liverpool,50–74,2023–2024,44.9485737619,available,938.56,136178,9,available_estimate
+12801,Cronulla - Miranda - Caringbah,50–74,2023–2024,56.1326254272,available,1075.235,117854,8,available_estimate
+12802,Sutherland - Menai - Heathcote,50–74,2023–2024,61.2777252007,available,1082.462,111698,8,available_estimate
+20101,Ballarat,50–74,2023–2024,55.1627573648,available,987.618,116203,10,available_estimate
+20102,Creswick - Daylesford - Ballan,50–74,2023–2024,50.8563029271,available,1017.365,30971,4,available_estimate
+20103,Maryborough - Pyrenees,50–74,2023–2024,49.52321447,available,934.595,26756,5,available_estimate
+20201,Bendigo,50–74,2023–2024,57.6346263368,available,978.553,103029,8,available_estimate
+20202,Heathcote - Castlemaine - Kyneton,50–74,2023–2024,54.8616691634,available,1027.863,52494,6,available_estimate
+20203,Loddon - Elmore,50–74,2023–2024,48.1602506649,available,966.482,12223,2,available_estimate
+20301,Barwon - West,50–74,2023–2024,57.4374063088,available,1050.537,22479,3,available_estimate
+20302,Geelong,50–74,2023–2024,56.7182748244,available,996.786,211985,13,available_estimate
+20303,Surf Coast - Bellarine Peninsula,50–74,2023–2024,58.2204580461,available,1062.519,93420,7,available_estimate
+20401,Upper Goulburn Valley,50–74,2023–2024,52.9214905933,available,992.826,60001,9,available_estimate
+20402,Wangaratta - Benalla,50–74,2023–2024,53.3094052241,available,982.278,48457,5,available_estimate
+20403,Wodonga - Alpine,50–74,2023–2024,50.9566746035,available,997.67,76491,9,available_estimate
+20501,Baw Baw,50–74,2023–2024,50.8588957055,available,1003.424,57777,4,available_estimate
+20502,Gippsland - East,50–74,2023–2024,56.013045744,available,963.256,48842,5,available_estimate
+20503,Gippsland - South West,50–74,2023–2024,51.5310084062,available,997.007,71520,6,available_estimate
+20504,Latrobe Valley,50–74,2023–2024,53.0126114586,available,930.624,77164,6,available_estimate
+20505,Wellington,50–74,2023–2024,54.5400149193,available,973.403,45505,5,available_estimate
+20601,Brunswick - Coburg,50–74,2023–2024,56.4762132441,available,1053.99,89885,7,available_estimate
+20602,Darebin - South,50–74,2023–2024,59.6444193594,available,1062.476,53280,4,available_estimate
+20603,Essendon,50–74,2023–2024,54.247310001,available,1039.421,68713,5,available_estimate
+20604,Melbourne City,50–74,2023–2024,50.3790329977,available,1017.01,149599,14,available_estimate
+20605,Port Phillip,50–74,2023–2024,53.3192789111,available,1061.012,101963,8,available_estimate
+20606,Stonnington - West,50–74,2023–2024,49.0389429448,available,1079.072,62539,5,available_estimate
+20607,Yarra,50–74,2023–2024,52.7510148188,available,1045.777,91058,8,available_estimate
+20701,Boroondara,50–74,2023–2024,54.0593700797,available,1089.611,167896,12,available_estimate
+20702,Manningham - West,50–74,2023–2024,52.6766181959,available,1047.217,98386,6,available_estimate
+20703,Whitehorse - West,50–74,2023–2024,54.5205658041,available,1038.092,107189,7,available_estimate
+20801,Bayside,50–74,2023–2024,54.4245244286,available,1090.408,101316,6,available_estimate
+20802,Glen Eira,50–74,2023–2024,56.1723813304,available,1073.449,156471,10,available_estimate
+20803,Kingston,50–74,2023–2024,53.355549859,available,1057.291,122642,9,available_estimate
+20804,Stonnington - East,50–74,2023–2024,52.0862416628,available,1092.482,42162,2,available_estimate
+20901,Banyule,50–74,2023–2024,58.4593755139,available,1057.718,126235,9,available_estimate
+20902,Darebin - North,50–74,2023–2024,52.9541534278,available,993.652,95300,7,available_estimate
+20903,Nillumbik - Kinglake,50–74,2023–2024,57.817786299,available,1089.496,67099,7,available_estimate
+20904,Whittlesea - Wallan,50–74,2023–2024,50.136741278,available,991.933,252014,19,available_estimate
+21001,Keilor,50–74,2023–2024,55.4261514029,available,1043.761,61673,6,available_estimate
+21002,Macedon Ranges,50–74,2023–2024,56.0382916053,available,1070.791,32967,4,available_estimate
+21003,Moreland - North,50–74,2023–2024,53.7754432042,available,995.594,80531,8,available_estimate
+21004,Sunbury,50–74,2023–2024,50.5583756345,available,1030.13,45059,4,available_estimate
+21005,Tullamarine - Broadmeadows,50–74,2023–2024,48.6698520667,available,923.535,204060,15,available_estimate
+21101,Knox,50–74,2023–2024,56.0587810166,available,1042.192,159149,12,available_estimate
+21102,Manningham - East,50–74,2023–2024,59.7472939815,available,1089.524,26387,2,available_estimate
+21103,Maroondah,50–74,2023–2024,58.3942460919,available,1040.95,114577,8,available_estimate
+21104,Whitehorse - East,50–74,2023–2024,57.0487554668,available,1050.823,62935,5,available_estimate
+21105,Yarra Ranges,50–74,2023–2024,55.7419295506,available,1041.353,155252,13,available_estimate
+21201,Cardinia,50–74,2023–2024,49.1180295392,available,1020.91,118344,8,available_estimate
+21202,Casey - North,50–74,2023–2024,51.4128026506,available,998.975,137287,10,available_estimate
+21203,Casey - South,50–74,2023–2024,44.2283664719,available,992.103,227938,15,available_estimate
+21204,Dandenong,50–74,2023–2024,47.7920560748,available,907.226,193641,13,available_estimate
+21205,Monash,50–74,2023–2024,53.665906948,available,1041.433,182834,10,available_estimate
+21301,Brimbank,50–74,2023–2024,47.5581857027,available,906.09,186060,14,available_estimate
+21302,Hobsons Bay,50–74,2023–2024,53.9136431554,available,1026.979,86583,6,available_estimate
+21303,Maribyrnong,50–74,2023–2024,52.3707759374,available,1009.721,85217,6,available_estimate
+21304,Melton - Bacchus Marsh,50–74,2023–2024,46.4013412145,available,987.65,198432,15,available_estimate
+21305,Wyndham,50–74,2023–2024,47.5977999255,available,1004.029,296757,20,available_estimate
+21401,Frankston,50–74,2023–2024,46.2292676974,available,1003.45,139273,7,available_estimate
+21402,Mornington Peninsula,50–74,2023–2024,53.1210725614,available,1037.521,168944,10,available_estimate
+21501,Grampians,50–74,2023–2024,54.854208816,available,965.85,60340,9,available_estimate
+21502,Mildura,50–74,2023–2024,51.6226415094,available,940.021,56975,6,available_estimate
+21503,Murray River - Swan Hill,50–74,2023–2024,48.2763694788,available,949.516,38266,6,available_estimate
+21601,Campaspe,50–74,2023–2024,53.6853032775,available,965.083,38893,5,available_estimate
+21602,Moira,50–74,2023–2024,54.8348514123,available,958.287,30524,4,available_estimate
+21603,Shepparton,50–74,2023–2024,56.2309270099,available,943.78,68205,6,available_estimate
+21701,Glenelg - Southern Grampians,50–74,2023–2024,57.1929824734,available,971.153,36797,4,available_estimate
+21703,Colac - Corangamite,50–74,2023–2024,56.8103318817,available,977.61,38499,6,available_estimate
+21704,Warrnambool,50–74,2023–2024,59.3515948989,available,1006.051,52774,4,available_estimate
+30101,Capalaba,50–74,2023–2024,54.2209700837,available,1029.506,73378,6,available_estimate
+30102,Cleveland - Stradbroke,50–74,2023–2024,51.5070988588,available,1024.068,93392,8,available_estimate
+30103,Wynnum - Manly,50–74,2023–2024,54.0983674084,available,1042.215,73035,7,available_estimate
+30201,Bald Hills - Everton Park,50–74,2023–2024,54.2186345144,available,1072.093,46133,5,available_estimate
+30202,Chermside,50–74,2023–2024,52.8666703249,available,1045.991,74336,8,available_estimate
+30203,Nundah,50–74,2023–2024,51.537923098,available,1042.815,42834,5,available_estimate
+30204,Sandgate,50–74,2023–2024,49.8938373376,available,1006.643,61171,6,available_estimate
+30301,Carindale,50–74,2023–2024,51.9940493357,available,1076.203,54289,5,available_estimate
+30302,Holland Park - Yeronga,50–74,2023–2024,49.3033496088,available,1057.741,79388,8,available_estimate
+30303,Mt Gravatt,50–74,2023–2024,51.7412756777,available,1031.774,79370,7,available_estimate
+30304,Nathan,50–74,2023–2024,51.4416615236,available,1041.421,39905,5,available_estimate
+30305,Rocklea - Acacia Ridge,50–74,2023–2024,50.003497337,available,1011.843,67891,5,available_estimate
+30306,Sunnybank,50–74,2023–2024,51.0743328482,available,987.892,50189,4,available_estimate
+30401,Centenary,50–74,2023–2024,50.5453038328,available,1082.129,33012,5,available_estimate
+30402,Kenmore - Brookfield - Moggill,50–74,2023–2024,48.2439537329,available,1105.245,47735,6,available_estimate
+30403,Sherwood - Indooroopilly,50–74,2023–2024,45.7203706231,available,1068.383,54292,6,available_estimate
+30404,The Gap - Enoggera,50–74,2023–2024,52.1491193413,available,1065.504,54180,6,available_estimate
+30501,Brisbane Inner,50–74,2023–2024,46.2281616862,available,1039.285,87465,8,available_estimate
+30502,Brisbane Inner - East,50–74,2023–2024,47.366225715,available,1082.447,44377,6,available_estimate
+30503,Brisbane Inner - North,50–74,2023–2024,47.8288116783,available,1077.156,100063,13,available_estimate
+30504,Brisbane Inner - West,50–74,2023–2024,46.2904335857,available,1097.605,60329,6,available_estimate
+30601,Cairns - North,50–74,2023–2024,57.9550790215,available,1035.453,57776,6,available_estimate
+30602,Cairns - South,50–74,2023–2024,54.4368443423,available,952.032,105474,13,available_estimate
+30603,Innisfail - Cassowary Coast,50–74,2023–2024,55.0502904258,available,903.175,35331,5,available_estimate
+30604,Port Douglas - Daintree,50–74,2023–2024,54.1048034934,available,979.794,12256,2,available_estimate
+30605,Tablelands (East) - Kuranda,50–74,2023–2024,52.2409852922,available,947.574,42893,5,available_estimate
+30701,Darling Downs (West) - Maranoa,50–74,2023–2024,51.6876784516,available,960.042,44248,8,available_estimate
+30702,Darling Downs - East,50–74,2023–2024,50.6165485209,available,953.278,42866,5,available_estimate
+30703,Granite Belt,50–74,2023–2024,52.892463838,available,943.538,41518,6,available_estimate
+30801,Central Highlands (Qld),50–74,2023–2024,55.1560120947,available,977.899,28861,3,available_estimate
+30803,Rockhampton,50–74,2023–2024,60.1085358772,available,967.363,121364,19,available_estimate
+30804,Biloela,50–74,2023–2024,50.7142820342,available,991.58,14511,2,available_estimate
+30805,Gladstone,50–74,2023–2024,53.7903649152,available,954.037,63516,9,available_estimate
+30901,Broadbeach - Burleigh,50–74,2023–2024,53.7535297826,available,1044.344,66400,6,available_estimate
+30902,Coolangatta,50–74,2023–2024,54.8684680339,available,1029.605,57515,5,available_estimate
+30903,Gold Coast - North,50–74,2023–2024,49.1179790297,available,986.712,69384,6,available_estimate
+30904,Gold Coast Hinterland,50–74,2023–2024,47.7813460121,available,1041.565,20112,2,available_estimate
+30905,Mudgeeraba - Tallebudgera,50–74,2023–2024,52.2729825591,available,1055.158,36036,3,available_estimate
+30906,Nerang,50–74,2023–2024,50.3836241608,available,1017.675,69690,5,available_estimate
+30907,Ormeau - Oxenford,50–74,2023–2024,47.6098735827,available,1023.352,158061,12,available_estimate
+30908,Robina,50–74,2023–2024,54.1752858945,available,1028.75,53909,5,available_estimate
+30909,Southport,50–74,2023–2024,47.6158335606,available,980.754,64486,5,available_estimate
+30910,Surfers Paradise,50–74,2023–2024,45.4146830293,available,1011.81,45196,5,available_estimate
+31001,Forest Lake - Oxley,50–74,2023–2024,48.4244426708,available,912.741,78718,7,available_estimate
+31002,Ipswich Hinterland,50–74,2023–2024,52.5368414108,available,956.381,67291,5,available_estimate
+31003,Ipswich Inner,50–74,2023–2024,50.0352704691,available,955.418,115922,13,available_estimate
+31004,Springfield - Redbank,50–74,2023–2024,47.0800776839,available,966.844,105195,8,available_estimate
+31101,Beaudesert,50–74,2023–2024,47.4957387817,available,915.254,14674,1,available_estimate
+31102,Beenleigh,50–74,2023–2024,43.1380090609,available,929.339,46320,5,available_estimate
+31103,Browns Plains,50–74,2023–2024,45.3710726003,available,930.27,93634,8,available_estimate
+31104,Jimboomba,50–74,2023–2024,48.4354144537,available,1010.235,61647,6,available_estimate
+31105,Loganlea - Carbrook,50–74,2023–2024,46.0887562965,available,967.963,64453,6,available_estimate
+31106,Springwood - Kingston,50–74,2023–2024,45.2804039004,available,897.401,79059,8,available_estimate
+31201,Bowen Basin - North,50–74,2023–2024,51.2026191687,available,979.004,35820,5,available_estimate
+31202,Mackay,50–74,2023–2024,60.2744846794,available,999.313,121676,16,available_estimate
+31203,Whitsunday,50–74,2023–2024,54.5855139208,available,998.288,23381,2,available_estimate
+31301,Bribie - Beachmere,50–74,2023–2024,57.9325996557,available,957.536,37081,2,available_estimate
+31302,Caboolture,50–74,2023–2024,47.5840740644,available,921.228,79780,7,available_estimate
+31303,Caboolture Hinterland,50–74,2023–2024,51.2404988014,available,975.231,14899,2,available_estimate
+31304,Narangba - Burpengary,50–74,2023–2024,49.7016745152,available,979.77,69215,5,available_estimate
+31305,Redcliffe,50–74,2023–2024,49.4662968374,available,965.177,63774,6,available_estimate
+31401,The Hills District,50–74,2023–2024,52.9004987823,available,1086.192,89786,6,available_estimate
+31402,North Lakes,50–74,2023–2024,47.9158699857,available,1010.859,88064,5,available_estimate
+31403,Strathpine,50–74,2023–2024,48.8717034325,available,976.084,39848,4,available_estimate
+31501,Far North,50–74,2023–2024,41.8108962785,available,821.033,32203,9,available_estimate
+31502,Outback - North,50–74,2023–2024,52.2639200891,available,932.07,30377,4,available_estimate
+31503,Outback - South,50–74,2023–2024,51.5523743367,available,966.592,17236,5,available_estimate
+31601,Buderim,50–74,2023–2024,54.6537814819,available,1038.454,58955,4,available_estimate
+31602,Caloundra,50–74,2023–2024,56.427910206,available,1018.988,96304,9,available_estimate
+31603,Maroochy,50–74,2023–2024,54.6549599047,available,1019.8,63679,4,available_estimate
+31605,Noosa,50–74,2023–2024,51.8443282381,available,1038.193,46654,6,available_estimate
+31606,Sunshine Coast Hinterland,50–74,2023–2024,50.295507724,available,1020.144,59042,6,available_estimate
+31607,Nambour,50–74,2023–2024,52.3004549131,available,1001.853,49993,4,available_estimate
+31608,Noosa Hinterland,50–74,2023–2024,49.2748466628,available,1027.689,24207,1,available_estimate
+31701,Toowoomba,50–74,2023–2024,52.3208502114,available,981.333,162041,15,available_estimate
+31801,Charters Towers - Ayr - Ingham,50–74,2023–2024,60.6593406593,available,933.032,41454,7,available_estimate
+31802,Townsville,50–74,2023–2024,61.4703992709,available,990.391,192819,26,available_estimate
+31901,Bundaberg,50–74,2023–2024,49.2918275396,available,928.527,93801,11,available_estimate
+31902,Burnett,50–74,2023–2024,48.1972681307,available,890.473,49665,7,available_estimate
+31903,Gympie - Cooloola,50–74,2023–2024,48.8715206232,available,930.556,53142,5,available_estimate
+31904,Hervey Bay,50–74,2023–2024,52.806062831,available,935.559,63490,6,available_estimate
+31905,Maryborough,50–74,2023–2024,50.5275394229,available,886.218,47623,5,available_estimate
+40101,Adelaide City,50–74,2023–2024,56.0921248143,available,1001.067,25025,2,available_estimate
+40102,Adelaide Hills,50–74,2023–2024,58.0405361263,available,1059.338,79740,8,available_estimate
+40103,Burnside,50–74,2023–2024,60.4793608522,available,1082.664,46029,3,available_estimate
+40104,Campbelltown (SA),50–74,2023–2024,55.3677143729,available,1022.071,55170,3,available_estimate
+40105,Norwood - Payneham - St Peters,50–74,2023–2024,57.2976752316,available,1038.476,37486,3,available_estimate
+40106,Prospect - Walkerville,50–74,2023–2024,59.3980817991,available,1059.762,30292,3,available_estimate
+40107,Unley,50–74,2023–2024,60.4063349864,available,1067.203,38648,2,available_estimate
+40201,Gawler - Two Wells,50–74,2023–2024,55.3255372946,available,985.746,37712,3,available_estimate
+40202,Playford,50–74,2023–2024,45.1700154559,available,851.246,99936,8,available_estimate
+40203,Port Adelaide - East,50–74,2023–2024,49.4810444663,available,967.014,76857,4,available_estimate
+40204,Salisbury,50–74,2023–2024,50.3749200256,available,904.928,144528,9,available_estimate
+40205,Tea Tree Gully,50–74,2023–2024,58.6842793618,available,1030.92,96652,7,available_estimate
+40301,Holdfast Bay,50–74,2023–2024,61.6589087726,available,1046.968,35713,2,available_estimate
+40302,Marion,50–74,2023–2024,58.8084609425,available,1008.472,96323,7,available_estimate
+40303,Mitcham,50–74,2023–2024,62.8510791945,available,1074.321,66290,6,available_estimate
+40304,Onkaparinga,50–74,2023–2024,56.9274759553,available,988.39,176491,18,available_estimate
+40401,Charles Sturt,50–74,2023–2024,57.5770456961,available,999.319,118442,8,available_estimate
+40402,Port Adelaide - West,50–74,2023–2024,52.8020289714,available,938.86,60841,4,available_estimate
+40403,West Torrens,50–74,2023–2024,57.6497175141,available,1017.159,65049,5,available_estimate
+40501,Barossa,50–74,2023–2024,59.7756170531,available,1005.454,37985,6,available_estimate
+40502,Lower North,50–74,2023–2024,53.0283580348,available,960.052,22691,4,available_estimate
+40503,Mid North,50–74,2023–2024,54.5435834105,available,909.968,27168,4,available_estimate
+40504,Yorke Peninsula,50–74,2023–2024,60.1300298717,available,935.868,26657,5,available_estimate
+40601,Eyre Peninsula and South West,50–74,2023–2024,48.0966442953,available,938.34,57087,8,available_estimate
+40602,Outback - North and East,50–74,2023–2024,47.7737511732,available,883.183,25562,6,available_estimate
+40701,Fleurieu - Kangaroo Island,50–74,2023–2024,55.4673939995,available,979.671,55595,6,available_estimate
+40702,Limestone Coast,50–74,2023–2024,58.1233000907,available,957.398,66857,10,available_estimate
+40703,Murray and Mallee,50–74,2023–2024,53.7860049469,available,919.068,71255,12,available_estimate
+50101,Augusta - Margaret River - Busselton,50–74,2023–2024,52.4251169388,available,1022.325,57339,5,available_estimate
+50102,Bunbury,50–74,2023–2024,51.282379186,available,975.339,107543,13,available_estimate
+50103,Manjimup,50–74,2023–2024,50.1813412048,available,979.456,23868,4,available_estimate
+50201,Mandurah,50–74,2023–2024,52.6007957316,available,959.259,107638,9,available_estimate
+50301,Cottesloe - Claremont,50–74,2023–2024,44.2289650804,available,1099.728,71736,7,available_estimate
+50302,Perth City,50–74,2023–2024,49.8947965006,available,1063.585,110521,9,available_estimate
+50401,Bayswater - Bassendean,50–74,2023–2024,51.4643849841,available,1016.76,84465,5,available_estimate
+50402,Mundaring,50–74,2023–2024,49.1384596652,available,1029.799,43779,5,available_estimate
+50403,Swan,50–74,2023–2024,46.3053927656,available,996.901,148298,13,available_estimate
+50501,Joondalup,50–74,2023–2024,57.5958803344,available,1071.756,160654,14,available_estimate
+50502,Stirling,50–74,2023–2024,50.3012929145,available,1025.387,208143,14,available_estimate
+50503,Wanneroo,50–74,2023–2024,48.0074558403,available,1005.04,208499,16,available_estimate
+50601,Armadale,50–74,2023–2024,45.3857040012,available,989.966,94172,8,available_estimate
+50602,Belmont - Victoria Park,50–74,2023–2024,45.8545212153,available,1010.469,75298,6,available_estimate
+50603,Canning,50–74,2023–2024,50.0509282115,available,1019.574,99117,6,available_estimate
+50604,Gosnells,50–74,2023–2024,44.2362934844,available,975.312,126380,6,available_estimate
+50605,Kalamunda,50–74,2023–2024,50.5261390391,available,1033.603,58761,4,available_estimate
+50606,Serpentine - Jarrahdale,50–74,2023–2024,47.002229262,available,1028.169,32243,3,available_estimate
+50607,South Perth,50–74,2023–2024,50.094932087,available,1065.488,43454,3,available_estimate
+50701,Cockburn,50–74,2023–2024,50.9099908842,available,1032.221,115783,11,available_estimate
+50702,Fremantle,50–74,2023–2024,50.253244543,available,1041.042,39911,3,available_estimate
+50703,Kwinana,50–74,2023–2024,40.3237811686,available,973.004,45832,5,available_estimate
+50704,Melville,50–74,2023–2024,52.9509882324,available,1070.503,106132,10,available_estimate
+50705,Rockingham,50–74,2023–2024,49.5665502425,available,988.987,135681,10,available_estimate
+50901,Albany,50–74,2023–2024,46.4958449744,available,981.395,61883,10,available_estimate
+50902,Wheat Belt - North,50–74,2023–2024,46.2891230788,available,976.716,55935,10,available_estimate
+50903,Wheat Belt - South,50–74,2023–2024,50.9734200533,available,982.749,19358,5,available_estimate
+51001,Kimberley,50–74,2023–2024,42.3810618249,available,859.497,35095,5,available_estimate
+51002,East Pilbara,50–74,2023–2024,29.7993527768,available,931.941,25448,4,available_estimate
+51003,West Pilbara,50–74,2023–2024,39.8906003114,available,1043.691,29591,3,available_estimate
+51101,Esperance,50–74,2023–2024,59.1286727457,available,995.734,15969,2,available_estimate
+51102,Gascoyne,50–74,2023–2024,44.4363971502,available,966.669,9538,2,available_estimate
+51103,Goldfields,50–74,2023–2024,37.9815909199,available,959.942,38267,5,available_estimate
+51104,Mid West,50–74,2023–2024,50.0971980381,available,961.275,54979,8,available_estimate
+60101,Brighton,50–74,2023–2024,56.4818778573,available,890.667,19588,3,available_estimate
+60102,Hobart - North East,50–74,2023–2024,59.9189347919,available,1006.056,59163,9,available_estimate
+60103,Hobart - North West,50–74,2023–2024,50.3900306212,available,923.553,58008,9,available_estimate
+60104,Hobart - South and West,50–74,2023–2024,61.5886797385,available,1039.328,36643,4,available_estimate
+60105,Hobart Inner,50–74,2023–2024,61.4655125858,available,1045.429,55167,7,available_estimate
+60106,Sorell - Dodges Ferry,50–74,2023–2024,55.4459964911,available,995.54,18514,2,available_estimate
+60201,Launceston,50–74,2023–2024,61.6311475933,available,954.405,87339,17,available_estimate
+60202,Meander Valley - West Tamar,50–74,2023–2024,55.7651418565,available,967.331,24251,5,available_estimate
+60203,North East,50–74,2023–2024,58.2380828978,available,938.282,39595,8,available_estimate
+60301,Central Highlands (Tas.),50–74,2023–2024,47.7146458591,available,941.211,12426,3,available_estimate
+60302,Huon - Bruny Island,50–74,2023–2024,53.4565051753,available,982.563,21705,4,available_estimate
+60303,South East Coast,50–74,2023–2024,57.3920552234,available,940.935,7581,2,available_estimate
+60401,Burnie - Ulverstone,50–74,2023–2024,59.7730780236,available,929.667,50011,10,available_estimate
+60402,Devonport,50–74,2023–2024,59.7978644584,available,937.394,48287,8,available_estimate
+60403,West Coast,50–74,2023–2024,53.9390334534,available,933.969,17849,5,available_estimate
+70101,Darwin City,50–74,2023–2024,45.3542666552,available,1061.823,27035,7,available_estimate
+70102,Darwin Suburbs,50–74,2023–2024,44.1933743244,available,1009.97,54686,18,available_estimate
+70103,Litchfield,50–74,2023–2024,37.3180769835,available,1030.435,20973,4,available_estimate
+70104,Palmerston,50–74,2023–2024,37.9200768592,available,1010.328,37171,9,available_estimate
+70201,Alice Springs,50–74,2023–2024,30.9568489744,available,874.081,36476,10,available_estimate
+70202,Barkly,50–74,2023–2024,19.0746531647,available,717.605,5283,2,available_estimate
+70203,Daly - Tiwi - West Arnhem,50–74,2023–2024,26.6444010264,available,611.427,15802,5,available_estimate
+70204,East Arnhem,50–74,2023–2024,16.9013009194,available,676.046,12791,3,available_estimate
+70205,Katherine,50–74,2023–2024,32.6386083568,available,748.374,18739,4,available_estimate
+80101,Belconnen,50–74,2023–2024,56.5692980957,available,1058.564,106023,26,available_estimate
+80103,Canberra East,50–74,2023–2024,,not_published,904.49,1518,3,available_estimate
+80104,Gungahlin,50–74,2023–2024,53.8881469995,available,1077.62,87649,16,available_estimate
+80105,North Canberra,50–74,2023–2024,58.0736279153,available,1084.361,58332,13,available_estimate
+80106,South Canberra,50–74,2023–2024,58.6059048206,available,1102.175,31525,8,available_estimate
+80107,Tuggeranong,50–74,2023–2024,56.8188278455,available,1054.351,89453,19,available_estimate
+80108,Weston Creek,50–74,2023–2024,,not_published,1076.186,24627,8,available_estimate
+80109,Woden Valley,50–74,2023–2024,59.1126410404,available,1080.01,39278,12,available_estimate
+80110,Molonglo,50–74,2023–2024,,not_published,1100.389,11418,3,available_estimate
+80111,Uriarra - Namadgi,50–74,2023–2024,,not_published,1096.169,619,2,available_estimate
+90101,Christmas Island,50–74,2023–2024,60.1694915254,available,970.528,1692,1,available_estimate
+90102,Cocos (Keeling) Islands,50–74,2023–2024,68.75,available,849.975,593,1,available_estimate
+90103,Jervis Bay,50–74,2023–2024,,not_published,864.705,310,1,available_estimate
+90104,Norfolk Island,50–74,2023–2024,,not_published,1005.847,2188,1,available_estimate

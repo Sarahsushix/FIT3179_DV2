@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "How Does Breast Cancer Detection Vary by Age?",
+    "subtitle": "Invasive cancers detected per 10,000 women screened · Australia · 2024",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "anchor": "start"
+  },
+  "width": 700,
+  "height": 300,
+  "data": {
+    "url": "data/processed/cancer_detection_by_age_2024.csv"
+  },
+  "encoding": {
+    "y": {
+      "field": "age_group",
+      "type": "ordinal",
+      "sort": [
+        "50–54",
+        "55–59",
+        "60–64",
+        "65–69",
+        "70–74"
+      ],
+      "title": "Age group"
+    },
+    "x": {
+      "field": "rate_per_10000",
+      "type": "quantitative",
+      "title": "Cancers detected per 10,000 women screened",
+      "scale": {
+        "zero": true
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#B9C5C5",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "detail": {
+          "field": "age_group"
+        },
+        "x": {
+          "aggregate": "min",
+          "field": "rate_per_10000"
+        },
+        "x2": {
+          "aggregate": "max",
+          "field": "rate_per_10000"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 135
+      },
+      "encoding": {
+        "color": {
+          "field": "detection_type",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "All invasive cancers",
+              "Small invasive cancers (≤15 mm)"
+            ],
+            "range": [
+              "#D97757",
+              "#247A78"
+            ]
+          },
+          "legend": {
+            "title": "Detection category"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "age_group",
+            "title": "Age group"
+          },
+          {
+            "field": "detection_type",
+            "title": "Category"
+          },
+          {
+            "field": "rate_per_10000",
+            "type": "quantitative",
+            "title": "Per 10,000 screened",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "background": "white"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+
+  "title": {
+    "text": "Where Are the Largest Screening Participation Gaps?",
+    "subtitle": "Difference from the national average (52.4%) · Women aged 50–74 · 2023–2024",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "anchor": "middle",
+    "offset": 15
+  },
+
+  "width": 800,
+  "height": 550,
+
+  "data": {
+    "url": "data/processed/australia_sa3_simplified.geojson",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+
+  "transform": [
+    {
+      "calculate": "datum.properties.SA3_CODE21",
+      "as": "sa3_code"
+    },
+    {
+      "lookup": "sa3_code",
+      "from": {
+        "data": {
+          "url": "data/processed/sa3_participation_2023_2024.csv",
+          "format": {
+            "type": "csv",
+            "parse": {
+              "SA3_CODE21": "string",
+              "participation_rate": "number",
+              "participants": "number"
+            }
+          }
+        },
+        "key": "SA3_CODE21",
+        "fields": [
+          "participation_rate",
+          "participants",
+          "status"
+        ]
+      }
+    },
+    {
+      "calculate": "isValid(datum.participation_rate) ? datum.participation_rate - 52.4 : null",
+      "as": "participation_gap"
+    }
+  ],
+
+  "projection": {
+    "type": "mercator"
+  },
+
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.3
+  },
+
+  "encoding": {
+    "color": {
+      "condition": {
+        "test": "isValid(datum.participation_gap)",
+        "field": "participation_gap",
+        "type": "quantitative",
+        "scale": {
+          "domain": [-30, 0, 30],
+          "range": [
+            "#D97757",
+            "#F2F2F2",
+            "#247A78"
+          ],
+          "clamp": true
+        },
+        "legend": {
+          "title": "Gap from national average (pp)",
+          "format": "+.0f",
+          "orient": "right",
+          "gradientLength": 220
+        }
+      },
+      "value": "#BDBDBD"
+    },
+
+    "tooltip": [
+      {
+        "field": "properties.SA3_NAME21",
+        "type": "nominal",
+        "title": "SA3 Region"
+      },
+      {
+        "field": "participation_rate",
+        "type": "quantitative",
+        "title": "Participation Rate (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "participation_gap",
+        "type": "quantitative",
+        "title": "Gap from National Average (pp)",
+        "format": "+.1f"
+      },
+      {
+        "field": "participants",
+        "type": "quantitative",
+        "title": "Participants",
+        "format": ",.0f"
+      },
+      {
+        "field": "status",
+        "type": "nominal",
+        "title": "Data Status"
+      }
+    ]
+  },
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "background": "white",
+    "font": "Arial",
+    "legend": {
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  }
+}

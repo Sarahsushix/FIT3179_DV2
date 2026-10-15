@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Where Is Breast Screening Participation Missing?",
+    "subtitle": [
+      "One dot represents approximately 1,000 women not counted as screening participants in 2023–2024 (ages 50–74).",
+      "Dots are randomly placed within SA3 boundaries; they do not show individual women's locations.",
+      "Colour groups SA3 areas by their estimated 2021 SEIFA IRSD score (below / at or above the SA3 median)."
+    ],
+    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFontSize": 11,
+    "subtitlePadding": 7
+  },
+  "width": 790,
+  "height": 490,
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "data": {
+        "url": "data/processed/australia_sa3_simplified.geojson",
+        "format": {"type": "json", "property": "features"}
+      },
+      "transform": [{"calculate": "datum", "as": "geo_feature"}],
+      "mark": {"type": "geoshape", "fill": "#e7edf1", "stroke": "#ffffff", "strokeWidth": 0.3},
+      "encoding": {"shape": {"field": "geo_feature", "type": "geojson"}}
+    },
+    {
+      "data": {"url": "data/processed/sa3_nonparticipation_dot_density.csv"},
+      "mark": {"type": "circle", "size": 16, "opacity": 0.8, "strokeWidth": 0},
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "color": {
+          "field": "seifa_group",
+          "type": "nominal",
+          "title": "SA3 socioeconomic group",
+          "scale": {
+            "domain": ["Higher disadvantage", "Lower disadvantage", "SEIFA unavailable"],
+            "range": ["#b2182b", "#3d7897", "#a0a0a0"]
+          },
+          "legend": {"orient": "bottom", "columns": 3}
+        },
+        "tooltip": [
+          {"field": "sa3_name", "type": "nominal", "title": "SA3 area"},
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "nonparticipants", "type": "quantitative", "title": "Not counted as participants", "format": ",.0f"},
+          {"field": "participants", "type": "quantitative", "title": "Participants", "format": ",.0f"},
+          {"field": "population", "type": "quantitative", "title": "Population denominator", "format": ",.0f"},
+          {"field": "participation_rate", "type": "quantitative", "title": "Participation (%)", "format": ".1f"},
+          {"field": "irsd", "type": "quantitative", "title": "Estimated IRSD", "format": ".1f"}
+        ]
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}, "background": "white"}
+}

@@ -1,3 +1,7 @@
+/* ========================================
+   1. General Page Styling
+======================================== */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -7,6 +11,11 @@ body {
     margin: 0 auto;
     padding: 40px;
 }
+
+
+/* ========================================
+   2. Headings
+======================================== */
 
 h1 {
     color: #234567;
@@ -21,4 +30,135 @@ h2 {
 p {
     font-size: 18px;
     line-height: 1.8;
+}
+
+
+/* ========================================
+   3. Header
+======================================== */
+
+header {
+    margin-bottom: 40px;
+}
+
+header h2 {
+    margin-top: 8px;
+}
+
+
+/* ========================================
+   4. Section Layout
+======================================== */
+
+main section {
+    margin-bottom: 56px;
+}
+
+
+/* ========================================
+   5. National Participation Highlight
+======================================== */
+
+.national-highlight {
+    background-color: #e6f2f0;
+    border-left: 6px solid #247a78;
+    border-radius: 8px;
+
+    padding: 20px 28px;
+    margin: 28px 0;
+}
+
+.national-highlight p {
+    margin: 6px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.national-highlight strong {
+    display: inline-block;
+
+    color: #247a78;
+    font-size: 44px;
+    line-height: 1.2;
+
+    margin-right: 8px;
+}
+
+
+/* ========================================
+   6. Chart Containers
+======================================== */
+
+#state_bar,
+#sa3_map {
+    background-color: #ffffff;
+    border-radius: 10px;
+
+    padding: 24px;
+    margin: 24px 0 12px;
+
+    overflow-x: auto;
+}
+
+
+/* ========================================
+   7. Data Source Notes
+======================================== */
+
+.source {
+    color: #666666;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   8. Footer
+======================================== */
+
+footer {
+    border-top: 1px solid #d9d9d9;
+
+    padding-top: 20px;
+    margin-top: 48px;
+}
+
+footer p {
+    color: #666666;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   9. Responsive Design
+======================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .national-highlight strong {
+        font-size: 36px;
+    }
+
+    #state_bar,
+    #sa3_map {
+        padding: 12px;
+    }
+
 }

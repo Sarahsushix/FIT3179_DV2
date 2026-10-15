@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Where Is Breast Cancer Mortality Highest?",
+    "subtitle": "Women aged 50\u201374 \u00b7 2019\u20132023 \u00b7 Age-standardised deaths per 100,000 women",
+    "anchor": "middle",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "offset": 15
+  },
+  "width": 800,
+  "height": 550,
+  "projection": {
+    "type": "mercator"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/processed/australia_sa3_simplified.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#E8EEED",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.25
+      }
+    },
+    {
+      "data": {
+        "url": "data/processed/state_mortality_2019_2023.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "deaths": "number",
+            "mortality_rate": "number",
+            "longitude": "number",
+            "latitude": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "circle",
+        "color": "#247A78",
+        "opacity": 0.75,
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "mortality_rate",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              45
+            ],
+            "range": [
+              0,
+              2000
+            ]
+          },
+          "legend": {
+            "title": "Deaths per 100,000",
+            "orient": "right"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State / territory"
+          },
+          {
+            "field": "mortality_rate",
+            "type": "quantitative",
+            "title": "Age-standardised mortality rate",
+            "format": ".1f"
+          },
+          {
+            "field": "deaths",
+            "type": "quantitative",
+            "title": "Deaths (2019\u20132023)",
+            "format": ",.0f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "background": "white",
+    "font": "Arial"
+  }
+}

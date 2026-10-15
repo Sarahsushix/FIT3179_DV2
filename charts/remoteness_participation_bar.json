@@ -1,0 +1,134 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Does Remoteness Affect Screening Participation?",
+    "subtitle": "Women aged 50–74 · Australia · 2023–2024",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "offset": 18
+  },
+  "width": 690,
+  "height": 310,
+  "data": {
+    "url": "data/processed/remoteness_participation_2023_2024.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "remoteness": "string",
+        "participants": "number",
+        "crude_rate": "number",
+        "age_standardised_rate": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "fold": [
+        "crude_rate",
+        "age_standardised_rate"
+      ],
+      "as": [
+        "measure",
+        "rate"
+      ]
+    },
+    {
+      "calculate": "datum.measure === 'crude_rate' ? 'Crude rate' : 'Age-standardised rate'",
+      "as": "rate_type"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "remoteness",
+      "type": "nominal",
+      "sort": [
+        "Major cities",
+        "Inner regional",
+        "Outer regional",
+        "Remote",
+        "Very remote"
+      ],
+      "title": "Remoteness area",
+      "axis": {
+        "labelAngle": -20,
+        "labelFontSize": 11
+      }
+    },
+    "xOffset": {
+      "field": "rate_type",
+      "sort": [
+        "Crude rate",
+        "Age-standardised rate"
+      ]
+    },
+    "y": {
+      "field": "rate",
+      "type": "quantitative",
+      "title": "Screening participation (%)",
+      "scale": {
+        "domain": [
+          0,
+          65
+        ]
+      },
+      "axis": {
+        "grid": true,
+        "gridColor": "#eeeeee"
+      }
+    },
+    "color": {
+      "field": "rate_type",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Crude rate",
+          "Age-standardised rate"
+        ],
+        "range": [
+          "#247A78",
+          "#7AB6B5"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "remoteness",
+        "type": "nominal",
+        "title": "Remoteness area"
+      },
+      {
+        "field": "rate_type",
+        "type": "nominal",
+        "title": "Rate type"
+      },
+      {
+        "field": "rate",
+        "type": "quantitative",
+        "title": "Participation (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "participants",
+        "type": "quantitative",
+        "title": "Participants",
+        "format": ",.0f"
+      }
+    ]
+  },
+  "config": {
+    "background": "white",
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial"
+  }
+}

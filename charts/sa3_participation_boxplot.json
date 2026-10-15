@@ -1,0 +1,118 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "How Unequal Is Screening Participation Within States?",
+    "subtitle": "Distribution across SA3 regions \u00b7 Women aged 50\u201374 \u00b7 2023\u20132024",
+    "anchor": "start",
+    "fontSize": 17,
+    "subtitleFontSize": 11
+  },
+  "width": 760,
+  "height": 390,
+  "data": {
+    "url": "data/processed/sa3_participation_2023_2024.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toString(datum.SA3_CODE21)",
+      "as": "sa3_code"
+    },
+    {
+      "calculate": "substring(datum.sa3_code,0,1)",
+      "as": "state_digit"
+    },
+    {
+      "calculate": "{'1':'NSW','2':'VIC','3':'QLD','4':'SA','5':'WA','6':'TAS','7':'NT','8':'ACT'}[datum.state_digit]",
+      "as": "state"
+    },
+    {
+      "calculate": "toNumber(datum.participation_rate)",
+      "as": "rate"
+    },
+    {
+      "filter": "isValid(datum.rate) && datum.rate >= 0 && datum.rate <= 100 && isValid(datum.state)"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "boxplot",
+        "extent": 1.5,
+        "size": 34,
+        "median": {
+          "color": "#153C45"
+        },
+        "box": {
+          "fill": "#75B8B0",
+          "stroke": "#247A78"
+        },
+        "rule": {
+          "stroke": "#247A78"
+        },
+        "ticks": {
+          "stroke": "#247A78"
+        },
+        "outliers": {
+          "color": "#DB775A",
+          "size": 35
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "state",
+          "type": "nominal",
+          "sort": [
+            "NSW",
+            "VIC",
+            "QLD",
+            "SA",
+            "WA",
+            "TAS",
+            "NT",
+            "ACT"
+          ],
+          "axis": {
+            "title": "State / territory",
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "participation_rate",
+          "type": "quantitative",
+          "title": "SA3 screening participation (%)",
+          "scale": {
+            "domain": [15, 70],
+            "zero": false
+          },
+          "axis": {
+            "values": [20, 30, 40, 50, 60, 70],
+            "grid": true
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#DB775A",
+        "strokeDash": [
+          5,
+          4
+        ],
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": {
+          "datum": 52.4
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "white",
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    }
+  }
+}

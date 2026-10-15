@@ -1,0 +1,9 @@
+state,state_code,deaths,mortality_rate,longitude,latitude
+New South Wales,NSW,2346,39.5,146.0,-32.2
+Victoria,VIC,1879,39.8,144.0,-37.2
+Queensland,QLD,1470,37.9,145.0,-22.0
+Western Australia,WA,704,35.9,121.0,-26.0
+South Australia,SA,558,38.2,135.0,-30.0
+Tasmania,TAS,178,36.6,146.7,-42.0
+Australian Capital Territory,ACT,112,39.2,149.1,-35.3
+Northern Territory,NT,47,35.5,133.0,-19.5
