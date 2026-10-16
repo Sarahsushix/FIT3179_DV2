@@ -1,35 +1,47 @@
 /* ========================================
-   1. General Page Styling
+   Beyond the Pink Ribbon
+   Soft Pink Editorial Theme
 ======================================== */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333333;
 
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px;
+/* ========================================
+   1. Theme Colors
+======================================== */
+
+:root {
+    --rose-dark: #d27c97;
+    --rose-accent: #e3a6b8;
+    --rose-light: #f9e8ee;
+    --rose-wash: #fdf2f5;
+    --paper: #faf8f6;
+    --ink: #343238;
+    --muted: #716b70;
+    --teal: #247a78;
 }
 
 
 /* ========================================
-   2. Headings
+   2. Global Styles
 ======================================== */
 
-h1 {
-    color: #234567;
-    font-size: 40px;
+* {
+    box-sizing: border-box;
 }
 
-h2 {
-    color: #456789;
-    font-size: 24px;
+html {
+    scroll-behavior: smooth;
+    background-color: var(--paper);
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.8;
+body {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 36px 32px;
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
 }
 
 
@@ -38,127 +50,387 @@ p {
 ======================================== */
 
 header {
-    margin-bottom: 40px;
+    margin: 0 -36px 36px;
+    padding: 52px 36px 42px;
+    background-color: var(--rose-light);
+    border-bottom: 3px solid rgba(148, 103, 119, 0.13);
+}
+
+header h1 {
+    max-width: 850px;
+    margin: 0 0 10px;
+    color: var(--rose-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 5.3vw, 60px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
 }
 
 header h2 {
-    margin-top: 8px;
+    margin: 0;
+    color: var(--rose-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(18px, 2.1vw, 22px);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+header p {
+    margin-top: 16px;
 }
 
 
 /* ========================================
-   4. Section Layout
+   4. Headings
 ======================================== */
 
-main section {
-    margin-bottom: 56px;
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+main section > h2 {
+    max-width: 1100px;
+    margin: 0 0 14px;
+    color: var(--rose-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(28px, 3.1vw, 36px);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -0.015em;
+}
+
+main section h3 {
+    margin: 24px 0 10px;
+    color: var(--rose-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(21px, 2.3vw, 26px);
+    line-height: 1.25;
 }
 
 
 /* ========================================
-   5. National Participation Highlight
+   5. Chapter Numbering
+======================================== */
+
+main {
+    counter-reset: chapter;
+}
+
+main section {
+    counter-increment: chapter;
+    margin: 0 0 44px;
+    padding: 0 0 24px;
+    border-bottom: 1px solid #e9e0e2;
+}
+
+main section > h2::before {
+    content: "CHAPTER " counter(chapter, decimal-leading-zero);
+    display: block;
+    margin-bottom: 8px;
+    color: var(--rose-accent);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.16em;
+}
+
+
+/* ========================================
+   6. Paragraphs and Text
+======================================== */
+
+p {
+    max-width: 1100px;
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+/* ========================================
+   7. National Participation Highlight
 ======================================== */
 
 .national-highlight {
-    background-color: #e6f2f0;
-    border-left: 6px solid #247a78;
-    border-radius: 8px;
-
-    padding: 20px 28px;
-    margin: 28px 0;
+    margin: 18px 0;
+    padding: 16px 20px;
+    background-color: var(--rose-wash);
+    border-left: 4px solid var(--rose-accent);
+    border-radius: 4px;
 }
 
 .national-highlight p {
-    margin: 6px 0;
-    font-size: 16px;
+    margin: 3px 0;
+    font-size: 15px;
     line-height: 1.5;
 }
 
 .national-highlight strong {
     display: inline-block;
-
-    color: #247a78;
-    font-size: 44px;
+    margin-right: 6px;
+    color: var(--rose-dark);
+    font-size: 34px;
     line-height: 1.2;
-
-    margin-right: 8px;
 }
 
 
 /* ========================================
-   6. Chart Containers
+   8. Chart Containers
 ======================================== */
 
-#state_bar,
-#sa3_map {
-    background-color: #ffffff;
-    border-radius: 10px;
+#national_trend,
+#sa3_map,
+#state_participation,
+#age_heatmap,
+#remoteness_bar,
+#rescreening_line,
+#sa3_gap_map,
+#cancer_detection_dotplot,
+#incidence_trend,
+#mortality_map,
+#screening_mortality_scatter,
+#rescreening_slope,
+#sa3_lollipop {
+    max-width: 100%;
+    margin: 14px 0 8px;
+    background-color: transparent;
+    overflow: visible;
+}
 
-    padding: 24px;
-    margin: 24px 0 12px;
+.chart-container {
+    max-width: 100%;
+    margin: 14px 0 8px;
+    background-color: transparent;
+    overflow: visible;
+}
 
-    overflow-x: auto;
+.chart-container > #rescreening_slope,
+.chart-container > #sa3_lollipop {
+    margin: 0;
 }
 
 
 /* ========================================
-   7. Data Source Notes
+   9. Editorial Chart Layout
+======================================== */
+
+.editorial-chart-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    margin: 24px auto;
+}
+
+.editorial-chart-visual {
+    flex: 0 0 auto;
+    width: max-content;
+    max-width: none;
+    min-width: 0;
+    overflow: visible;
+}
+
+.editorial-chart-visual > [id],
+.editorial-chart-visual > .chart-container {
+    margin: 0;
+    max-width: none;
+    overflow: visible;
+}
+
+
+/* ========================================
+   10. Key Finding Panel
+======================================== */
+
+.editorial-chart-insight {
+    flex: 0 0 220px;
+    width: 220px;
+    min-width: 220px;
+    padding: 18px;
+    margin: 0;
+    background-color: var(--rose-wash);
+    border-left: 4px solid var(--rose-accent);
+    border-radius: 4px;
+}
+
+.insight-label {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--rose-dark);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.14em;
+}
+
+.editorial-chart-insight p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.editorial-chart-insight p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   11. Vega-Lite Background
+======================================== */
+
+.vega-embed,
+.vega-embed svg,
+.vega-embed canvas {
+    background-color: transparent !important;
+}
+
+
+/* ========================================
+   12. Additional Key Finding Highlights
+======================================== */
+
+.key-finding {
+    margin: 14px 0;
+    padding: 12px 16px;
+    background-color: var(--rose-wash);
+    border-left: 4px solid var(--rose-accent);
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.key-finding strong {
+    color: var(--rose-dark);
+}
+
+
+/* ========================================
+   13. Data Sources
 ======================================== */
 
 .source {
-    color: #666666;
-    font-size: 13px;
-    line-height: 1.5;
+    max-width: 1100px;
+    margin: 8px 0 16px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.55;
 }
 
 
 /* ========================================
-   8. Footer
+   14. Footer
 ======================================== */
 
 footer {
-    border-top: 1px solid #d9d9d9;
-
-    padding-top: 20px;
-    margin-top: 48px;
+    margin-top: 24px;
+    padding: 18px 0 0;
+    border-top: 1px solid #ded4d7;
 }
 
 footer p {
-    color: #666666;
-    font-size: 13px;
-    line-height: 1.5;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.55;
 }
 
 
 /* ========================================
-   9. Responsive Design
+   15. Responsive Chart Layout
+======================================== */
+
+@media (max-width: 1250px) {
+    .editorial-chart-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .editorial-chart-visual {
+        max-width: 100%;
+    }
+
+    .editorial-chart-insight {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+}
+
+
+/* ========================================
+   16. Mobile Responsive Design
 ======================================== */
 
 @media (max-width: 700px) {
-
     body {
-        padding: 20px;
+        padding: 0 18px 24px;
     }
 
-    h1 {
-        font-size: 32px;
+    header {
+        margin: 0 -18px 28px;
+        padding: 38px 18px 30px;
     }
 
-    h2 {
-        font-size: 21px;
+    header h1 {
+        font-size: clamp(38px, 9vw, 48px);
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    main section {
+        margin-bottom: 34px;
+        padding-bottom: 18px;
+    }
+
+    main section > h2 {
+        font-size: 28px;
+    }
+
+    main section h3 {
+        font-size: 22px;
     }
 
     p {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.65;
     }
 
     .national-highlight strong {
-        font-size: 36px;
+        font-size: 30px;
     }
 
-    #state_bar,
-    #sa3_map {
-        padding: 12px;
+    .editorial-chart-insight {
+        padding: 14px 16px;
     }
 
+    .editorial-chart-insight p {
+        font-size: 14px;
+    }
+
+    .key-finding {
+        font-size: 14px;
+    }
+}
+
+
+/* ========================================
+   17. Accessibility
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

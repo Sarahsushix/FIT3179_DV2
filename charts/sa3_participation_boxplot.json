@@ -109,7 +109,7 @@
     }
   ],
   "config": {
-    "background": "white",
+    "background": "#FAF8F6",
     "font": "Arial",
     "view": {
       "stroke": null

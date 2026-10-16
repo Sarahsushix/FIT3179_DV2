@@ -190,7 +190,7 @@
   ],
 
   "config": {
-    "background": "white",
+    "background": "#FAF8F6",
 
     "view": {
       "stroke": null
