@@ -126,7 +126,7 @@
     }
   ],
   "config": {
-    "background": "#FAF8F6",
+    "background": "transparent",
     "font": "Arial",
     "view": {
       "stroke": null

@@ -434,3 +434,57 @@ footer p {
         scroll-behavior: auto;
     }
 }
+
+
+/* ========================================
+   18. Chart Card Layout
+======================================== */
+
+.story-content {
+    width: 100%;
+}
+
+.chart-card {
+    margin: 24px 0 30px;
+    padding: 30px 26px 22px;
+    background-color: #fffdfd;
+    border: 1px solid #eadde2;
+    border-radius: 14px;
+    box-shadow: 0 3px 14px rgba(125, 80, 98, 0.04);
+}
+
+.chart-card .editorial-chart-row {
+    margin: 0 0 18px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.chart-card .source {
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid #f0e5e9;
+}
+
+
+/* ========================================
+   19. Responsive Card Layout
+======================================== */
+
+@media (max-width: 700px) {
+    .chart-card {
+        padding: 18px 14px;
+        border-radius: 10px;
+    }
+}
+
+
+/* ========================================
+   Remove Last Section Border
+======================================== */
+
+main section:last-child {
+    border-bottom: none;
+}

@@ -53,5 +53,5 @@
       }
     }
   ],
-  "config": {"view": {"stroke": null}, "background": "#FAF8F6"}
+  "config": {"view": {"stroke": null}, "background": "transparent"}
 }
